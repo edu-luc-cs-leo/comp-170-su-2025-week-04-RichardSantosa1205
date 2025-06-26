@@ -102,6 +102,9 @@ def intersect(foo, bar):
 
 print ( intersect(my_array, my_array2) )
 
+# Reflection
+# This task for me was a bit of a challange, as I had to go back to review my notes, however once I reviewed my notes, and tried it a couple of times, I managed to succesfully create the code, which resulted in me completing the entire task, through trial and error I was able to complete this task, though I had to admittedly conslt a few youtube videos, on the theories behind it as I was lost more than a few times while writing the code. Overall, this task for me was quite a challenge but one in which I was able to succeed in, I would give myself a 90/100
+
 #--------------------------------------------------------------------------------#
 # ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎  WRITE YOUR CODE ABOVE THIS  LINE ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎
 
