@@ -1,4 +1,106 @@
+# Array to test with
+my_array = ["testing", "secondlongest", "longest", "long"]
+my_array2 = ["lalalalala", "lululul", "lalalalalalala", "long", "lsdlasldlasldlsa"]
+my_array3 = ["lalalalala", "lululul", "lalalalalalala", "sdkoaskdoaksdok", "lsdlasldlasldlsa"]
+my_array4 = None
 
+
+def longest_word(words: list[str]) -> str:
+    # Check if words is None
+    if words == None or len(words) == 0:
+        return None
+
+    # Assume first word is the longest to start
+    longestWord = ""
+    longestWord = words[0]
+
+    # Examine every remaining word
+    for i in range (1, len(words)):
+        # If we find a longer word, remember it
+        if len(words[i]) > len(longestWord):
+            longestWord = words[i]
+    
+    return longestWord
+
+print ( longest_word(my_array) )
+print( longest_word(my_array4) )
+
+
+def shortest_word(words: list[str]) -> str:
+    # Check if words is None
+    if words == None or len(words) == 0:
+        return None
+
+    # Start out by treating the first word as the shortest
+    shortestWord = ""
+    shortestWord = words[0]
+
+    # Go through the rest of the words
+    for i in range (1, len(words)):
+        # If we find a shorter one, update our record
+        if len(words[i]) < len(shortestWord):
+            shortestWord = words[i]
+    
+    return shortestWord
+
+print ( shortest_word(my_array) )
+print( shortest_word(my_array4) )
+
+def odd_words(words: list[str]) -> list[str]:
+    # Check if words is None
+    if words == None or len(words) == 0:
+        return None
+
+    oddWords = [] # place to collect odd-length words
+
+    for i in range(0, len(words)):
+        # length is odd if remainder of ÷2 is 1
+        if len(words[i]) % 2 != 0:
+            oddWords.append(words[i])
+    
+    return oddWords
+
+print ( odd_words(my_array) )
+print ( odd_words(my_array4) ) 
+
+
+def average_words(words):
+    # Check if words is None
+    if words == None or len(words) == 0:
+        return None
+
+    # Compute the average length
+    total_length = 0
+    for w in words:
+        total_length += len(w)
+    average = total_length / len(words)
+
+    # Collect words whose length is within ±1 of that average
+    result = []
+    for w in words:
+        if abs(len(w) - average) <= 1:
+            result.append(w)
+
+    return result
+
+print ( average_words(my_array) )
+print ( average_words(my_array4) )
+
+def intersect(foo, bar):
+    # Check if either foo or bar is None
+    if foo == None or bar == None:
+        return False
+
+    # Compare every element in foo against every element in bar
+    for i in range(len(foo)):
+        for j in range(len(bar)):
+            # found match
+            if foo[i] == bar[j]:
+                return True
+            
+    return False
+
+print ( intersect(my_array, my_array2) )
 
 #--------------------------------------------------------------------------------#
 # ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎  WRITE YOUR CODE ABOVE THIS  LINE ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎
